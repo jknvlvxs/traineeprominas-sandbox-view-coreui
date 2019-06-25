@@ -1,20 +1,29 @@
 <app-header
   [navbarBrandRouterLink]="['/dashboard']"
   [fixed]="true"
-  [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, height: 25, alt: 'CoreUI Logo'}"
-  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'CoreUI Logo'}"
+  [navbarBrandFull]="{src: 'assets/img/brand/prominas.svg', width: 120, height: 50, alt: 'Prominas Logo'}"
+  [navbarBrandMinimized]="{src: 'assets/img/brand/small.svg', width: 30, height: 30, alt: 'Prominas Logo'}"
   [sidebarToggler]="'lg'"
   [asideMenuToggler]="'lg'">
   <ul class="nav navbar-nav d-md-down-none">
+    <!-- <li class="nav-item px-3">
+      <a class="nav-link" href="#/dashboard">Dashboard</a>
+    </li> -->
     <li class="nav-item px-3">
-      <a class="nav-link" href="#">Dashboard</a>
+      <a class="nav-link" href="#/user">User</a>
     </li>
     <li class="nav-item px-3">
-      <a class="nav-link" href="#">Users</a>
+      <a class="nav-link" href="#/teacher">Teacher</a>
     </li>
     <li class="nav-item px-3">
+      <a class="nav-link" href="#/course">Course</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#/student">Student</a>
+    </li>
+    <!-- <li class="nav-item px-3">
       <a class="nav-link" href="#">Settings</a>
-    </li>
+    </li> -->
   </ul>
   <ul class="nav navbar-nav ml-auto">
     <li class="nav-item d-md-down-none">
@@ -28,7 +37,7 @@
     </li>
     <li class="nav-item dropdown" dropdown placement="bottom right">
       <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
-        <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
+        <img src="assets/img/avatars/9.png" class="img-avatar" alt="admin@bootstrapmaster.com"/>
       </a>
       <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
         <div class="dropdown-header text-center"><strong>Account</strong></div>

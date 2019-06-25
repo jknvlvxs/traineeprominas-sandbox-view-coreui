@@ -10,11 +10,11 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'dashboard',
+  //   pathMatch: 'full',
+  // },
   {
     path: '404',
     component: P404Component,
@@ -55,6 +55,22 @@ export const routes: Routes = [
         loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
       },
       {
+        path: 'user',
+        loadChildren: () => import('./views/user/user.module').then(m => m.UserModule)
+      },
+      {
+        path: 'teacher',
+        loadChildren: () => import('./views/teacher/teacher.module').then(m => m.TeacherModule)
+      },
+      {
+        path: 'course',
+        loadChildren: () => import('./views/course/course.module').then(m => m.CourseModule)
+      },
+      {
+        path: 'student',
+        loadChildren: () => import('./views/student/student.module').then(m => m.StudentModule)
+      },
+      {
         path: 'buttons',
         loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
       },
@@ -81,7 +97,11 @@ export const routes: Routes = [
       {
         path: 'widgets',
         loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
-      }
+      },
+      // {
+      //   path: 'user',
+      //   loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
+      // },
     ]
   },
   { path: '**', component: P404Component }
