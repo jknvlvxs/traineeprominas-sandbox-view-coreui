@@ -1,0 +1,33 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-10 col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <div class="button-row">
+            <button color="accent" mat-flat-button class="btn-info" [routerLink]="['/user']"><mat-icon>list</mat-icon> Voltar</button>
+        </div>  
+        </div>
+        <div class="card-body">
+          <div *ngIf="user.id != 0" class="example-container mat-elevation-z8">
+          <div class="example-loading-shade"
+                 *ngIf="isLoadingResults">
+              <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+            </div>
+            <mat-card class="example-card">
+              <mat-card-header>
+                  <mat-card-subtitle>{{user.id}}</mat-card-subtitle>
+                <mat-card-title><h2>{{user.name}} {{user.lastName}}</h2></mat-card-title>
+                <mat-card-subtitle>{{user.profile}}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-actions>
+                <button mat-flat-button color="accent" class="btn-info" [routerLink]="['/user/update', user.id]"><mat-icon>edit</mat-icon> Editar</button>
+                <button mat-flat-button color="warn" class="btn-danger" (click)="deleteUser(user.id)"><mat-icon>delete</mat-icon> Excluir</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div *ngIf="isLoadingResults == false && user.id == 0">404</div>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div><!--/.row-->
+</div>
