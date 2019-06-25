@@ -1,0 +1,35 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>Adicionar Novo Curso</strong>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <form class="example-container" [formGroup]="courseForm" (ngSubmit)="postCourse(courseForm.value)">
+                <mat-form-field>
+                  <input matInput name="name" required placeholder="Nome do Curso" formControlName="name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="number" name="period" placeholder="Periodo do Curso" formControlName="period">
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput name="city" required placeholder="Cidade do Curso" formControlName="city">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label >Teacher</mat-label>
+                    <mat-select name="city" formControlName="teacher" multiple>
+                    <mat-option *ngFor="let prof of teacher" [value]="prof.id">{{prof.name}} {{prof.lastName}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                <button type="submit" [disabled]="!courseForm.valid" mat-button color="primary" >Adicionar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
