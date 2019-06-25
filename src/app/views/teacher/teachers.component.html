@@ -1,0 +1,46 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Lista de Professores
+          <button class="btnr btn-success" mat-flat-button color="accent" routerLink="/teacher/create" selected>Novo Professor</button>    
+        </div>
+        <div class="card-body">
+          <div class="example-header" fxLayout="row">
+            <mat-form-field>
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+            </mat-form-field>
+          </div>
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+              <mat-cell *matCellDef="let row" data-label="id"> {{row.id}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+              <mat-cell *matCellDef="let row" data-label="nome"> {{row.name}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="lastName">
+              <mat-header-cell *matHeaderCellDef> Sobrenome </mat-header-cell>
+              <mat-cell *matCellDef="let row" data-label="sobrenome"> {{row.lastName}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="phd">
+              <mat-header-cell *matHeaderCellDef> PHD </mat-header-cell>
+              <mat-cell *matCellDef="let row" data-label="phd"> {{row.phd}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+                <mat-cell *matCellDef="let row"> <button mat-flat-button color="accent" class="btn-dark" routerLink="/teacher/{{row.id}}" selected>Mais informações</button></mat-cell>
+              </ng-container>
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row >
+          </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

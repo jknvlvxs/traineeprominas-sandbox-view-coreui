@@ -1,0 +1,33 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>Editar Professor</strong>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <form class="example-container" [formGroup]="teacherForm" (ngSubmit)="putTeacher(teacherForm.value)">
+                <mat-form-field>
+                  <input matInput name="name" placeholder="Nome do Professor" formControlName="name">
+                </mat-form-field>
+                <mat-form-field>
+                  <input  matInput name="lastName" placeholder="Sobrenome do Professor" formControlName="lastName">
+                </mat-form-field>
+            <mat-form-field>
+              <mat-label>PHD</mat-label>
+              <select matNativeControl required name="phd" formControlName="phd">
+                <option value="true">Possui</option>
+                <option value="false">Não possui</option>
+              </select>
+            </mat-form-field>
+                <button type="submit" [disabled]="!teacherForm.valid" mat-button color="primary" >Editar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
