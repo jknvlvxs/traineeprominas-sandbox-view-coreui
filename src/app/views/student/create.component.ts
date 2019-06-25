@@ -26,7 +26,7 @@ export class CreateComponent implements OnInit {
       name : [null, Validators.required],
       lastName : [null, Validators.required],
       age : [null, Validators.required],
-      course : [[]],
+      course : [[], Validators.required],
   });
 }
 

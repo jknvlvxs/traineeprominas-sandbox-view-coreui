@@ -20,7 +20,7 @@
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label >Teacher</mat-label>
-                    <mat-select name="city" formControlName="teacher" multiple>
+                    <mat-select name="teacher" formControlName="teacher" multiple>
                     <mat-option *ngFor="let prof of teacher" [value]="prof.id">{{prof.name}} {{prof.lastName}}</mat-option>
                     </mat-select>
                   </mat-form-field>
