@@ -1,0 +1,35 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>Editar Estudante</strong>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <form class="example-container" [formGroup]="studentForm" (ngSubmit)="putStudent(studentForm.value)">
+                <mat-form-field>
+                  <input matInput name="name" required placeholder="Nome do Estudante" formControlName="name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput name="lastName" required placeholder="Sobrenome do Estudante" formControlName="lastName">
+                  </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="number" name="age" placeholder="Idade do Estudante" formControlName="age">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label >Curso</mat-label>
+                    <mat-select name="course" formControlName="course">
+                    <mat-option *ngFor="let curso of course" [value]="[curso.id]">{{curso.name}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                <button type="submit" [disabled]="!studentForm.valid" mat-button color="primary" >Editar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
