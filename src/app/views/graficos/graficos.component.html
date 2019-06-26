@@ -85,7 +85,7 @@
         Quantidade de estudantes por curso
       </div>
       <div class="card-body">
-        <div class="chart-wrapper" *ngIf="pieChartData.length === pieChartLabels.length">
+        <div class="chart-wrapper" *ngIf="pieChartData && pieChartData.length === pieChartLabels.length">
           <canvas baseChart class="chart"
           [data]="pieChartData"
           [labels]="pieChartLabels"
