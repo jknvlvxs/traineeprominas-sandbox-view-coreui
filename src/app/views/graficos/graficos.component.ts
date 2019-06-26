@@ -83,7 +83,7 @@ export class GraficosComponent implements OnInit {
   }
 
    // events
-   chartClicked(e: any): void {
+  chartClicked(e: any): void {
     // console.log(e);
   }
   chartHovered(e: any): void {

@@ -65,10 +65,9 @@ import { UserRoutingModule } from './user-routing.module';
   MatSidenavModule, MatTableModule, MatToolbarModule, MatPaginatorModule,
   MatFormFieldModule,
   HttpClientModule,
-  HttpModule
+  // HttpModule
   ],
   declarations: [
-   
     CreateComponent,
     UsersComponent,
     UserIdComponent,

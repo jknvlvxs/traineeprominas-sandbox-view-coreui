@@ -65,7 +65,7 @@ import { CourseRoutingModule } from './course-routing.module';
   MatSidenavModule, MatTableModule, MatToolbarModule, MatPaginatorModule,
   MatFormFieldModule,
   HttpClientModule,
-  HttpModule
+  // HttpModule
   ],
   declarations: [
     CreateComponent,
