@@ -14,7 +14,7 @@ const routes: Routes = [
     },
     children: [
       {
-        path: 'create',
+        path: 'novo',
         component: CreateComponent,
         data: {
           title: 'Novo'
@@ -35,7 +35,7 @@ const routes: Routes = [
         }
       },
       {
-        path: 'update/:id',
+        path: 'editar/:id',
         component: UpdateComponent,
         data: {
           title: 'Editar'

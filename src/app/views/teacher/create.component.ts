@@ -29,7 +29,7 @@ export class CreateComponent implements OnInit {
       .subscribe(res => {
           // const id = res['id'];
           this.isLoadingResults = false;
-          this.router.navigate(['/teacher'/*, id*/]);
+          this.router.navigate(['/professor'/*, id*/]);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;

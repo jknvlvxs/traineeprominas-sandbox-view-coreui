@@ -31,7 +31,7 @@ export class StudentIdComponent implements OnInit {
     this.api.deleteStudent(id)
       .subscribe(res => {
           this.isLoadingResults = false;
-          this.router.navigate(['/student']);
+          this.router.navigate(['/estudante']);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;

@@ -4,7 +4,7 @@
       <div class="card">
         <div class="card-header">
           <div class="button-row">
-            <button color="accent" mat-flat-button class="btn-info" [routerLink]="['/course']"><mat-icon>list</mat-icon> Voltar</button>
+            <button color="accent" mat-flat-button class="btn-info" [routerLink]="['/curso']"><mat-icon>list</mat-icon> Voltar</button>
         </div>  
         </div>
         <div class="card-body">
@@ -22,11 +22,11 @@
               <mat-card-content>
                   <mat-card-subtitle>{{course.period}} semestres</mat-card-subtitle>
                   <mat-list> Professores:
-                    <mat-list-item *ngFor="let prof of course.teacher" routerLink="/teacher/{{prof.id}}">{{prof.name}} {{prof.lastName}}</mat-list-item>
+                    <mat-list-item *ngFor="let prof of course.teacher" routerLink="/professor/{{prof.id}}">{{prof.name}} {{prof.lastName}}</mat-list-item>
                   </mat-list>
               </mat-card-content>
               <mat-card-actions>
-                <button mat-flat-button color="accent" class="btn-info"  [routerLink]="['/course/update', course.id]"><mat-icon>edit</mat-icon> Editar</button>
+                <button mat-flat-button color="accent" class="btn-info"  [routerLink]="['/curso/editar', course.id]"><mat-icon>edit</mat-icon> Editar</button>
                 <button mat-flat-button color="warn" class="btn-danger" (click)="deleteCourse(course.id)"><mat-icon>delete</mat-icon> Excluir</button>
               </mat-card-actions>
             </mat-card>

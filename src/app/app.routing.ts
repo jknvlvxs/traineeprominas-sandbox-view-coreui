@@ -47,7 +47,7 @@ export const routes: Routes = [
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Início'
     },
     children: [
       {
@@ -55,20 +55,24 @@ export const routes: Routes = [
         loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
       },
       {
-        path: 'user',
+        path: 'usuario',
         loadChildren: () => import('./views/user/user.module').then(m => m.UserModule)
       },
       {
-        path: 'teacher',
+        path: 'professor',
         loadChildren: () => import('./views/teacher/teacher.module').then(m => m.TeacherModule)
       },
       {
-        path: 'course',
+        path: 'curso',
         loadChildren: () => import('./views/course/course.module').then(m => m.CourseModule)
       },
       {
-        path: 'student',
+        path: 'estudante',
         loadChildren: () => import('./views/student/student.module').then(m => m.StudentModule)
+      },
+      {
+        path: 'graficos',
+        loadChildren: () => import('./views/graficos/graficos.module').then(m => m.GraficosModule)
       },
       {
         path: 'buttons',

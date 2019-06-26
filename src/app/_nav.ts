@@ -45,51 +45,56 @@ export const navItems: NavData[] = [
   },
   {
     name: 'Usuários',
-    url: '/user',
+    url: '/usuario',
     icon: 'icon-user',
     children: [
       {
         name: 'Novo usuário',
-        url: '/user/create',
+        url: '/usuario/novo',
         icon: 'icon-user-follow'
       }
     ]
   },
   {
     name: 'Professores',
-    url: '/teacher',
+    url: '/professor',
     icon: 'icon-puzzle',
     children: [
       {
         name: 'Novo professor',
-        url: '/teacher/create',
+        url: '/professor/novo',
         icon: 'icon-puzzle'
       }
     ]
   },
   {
     name: 'Cursos',
-    url: '/course',
+    url: '/curso',
     icon: 'icon-pencil',
     children: [
       {
         name: 'Novo curso',
-        url: '/course/create',
+        url: '/curso/novo',
         icon: 'icon-pencil'
       }
     ]
   },
   {
     name: 'Estudantes',
-    url: '/student',
+    url: '/estudante',
     icon: 'icon-user-female',
     children: [
       {
         name: 'Novo estudante ',
-        url: '/student/create',
+        url: '/estudante/novo',
         icon: 'icon-user-female'
       }
     ]
+  },
+  {
+    name: 'Graficos',
+    url: '/graficos',
+    icon: 'icon-chart',
   },
   // {
   //   name: 'Buttons',

@@ -4,7 +4,7 @@
       <div class="card">
         <div class="card-header">
           <i class="fa fa-align-justify"></i> Lista de Usuários
-          <button class="btnr btn-success" mat-flat-button color="accent" routerLink="/user/create" selected>Novo Usuário</button>    
+          <button class="btnr btn-success" mat-flat-button color="accent" routerLink="/usuario/novo" selected>Novo Usuário</button>    
         </div>
         <div class="card-body">
           <div class="example-header" fxLayout="row">
@@ -36,7 +36,7 @@
           
               <ng-container matColumnDef="action" >
                   <mat-header-cell *matHeaderCellDef></mat-header-cell>
-                  <mat-cell  *matCellDef="let row"> <button mat-flat-button color="accent" class="btn-dark" routerLink="/user/{{row.id}}" selected>Mais informações</button></mat-cell>
+                  <mat-cell  *matCellDef="let row"> <button mat-flat-button color="accent" class="btn-dark" routerLink="/usuario/{{row.id}}" selected>Mais informações</button></mat-cell>
                 </ng-container>
               <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
               <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row >

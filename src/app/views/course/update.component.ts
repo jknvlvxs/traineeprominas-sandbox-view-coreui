@@ -50,7 +50,7 @@ putCourse(form) {
   this.api.putCourse(this.id, form)
     .subscribe(res => {
         this.isLoadingResults = false;
-        this.router.navigate(['/course/' + this.id]);
+        this.router.navigate(['/curso/' + this.id]);
       }, (err) => {
         console.log(err);
         this.isLoadingResults = false;

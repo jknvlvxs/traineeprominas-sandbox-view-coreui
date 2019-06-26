@@ -41,7 +41,7 @@ putUser(form: NgForm) {
   this.api.putUser(this.id, form)
     .subscribe(res => {
         this.isLoadingResults = false;
-        this.router.navigate(['/user/' + this.id]);
+        this.router.navigate(['/usuario/' + this.id]);
       }, (err) => {
         console.log(err);
         this.isLoadingResults = false;

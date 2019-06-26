@@ -31,7 +31,7 @@ export class TeacherIdComponent implements OnInit {
     this.api.deleteTeacher(id)
       .subscribe(res => {
           this.isLoadingResults = false;
-          this.router.navigate(['/teacher']);
+          this.router.navigate(['/professor']);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;

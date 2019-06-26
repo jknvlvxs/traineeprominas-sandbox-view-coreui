@@ -4,7 +4,7 @@
       <div class="card">
         <div class="card-header">
           <div class="button-row">
-            <button color="accent" mat-flat-button class="btn-info" [routerLink]="['/student']"><mat-icon>list</mat-icon> Voltar</button>
+            <button color="accent" mat-flat-button class="btn-info" [routerLink]="['/estudante']"><mat-icon>list</mat-icon> Voltar</button>
         </div>  
         </div>
         <div class="card-body">
@@ -21,11 +21,11 @@
               <mat-card-content>
                   <mat-card-subtitle>{{student.age}} anos</mat-card-subtitle>
                   <mat-list> Cursos:
-                    <mat-list-item *ngFor="let curso of student.course" routerLink="/course/{{curso.id}}">{{curso.name}} {{curso.lastName}}</mat-list-item>
+                    <mat-list-item *ngFor="let curso of student.course" routerLink="/curso/{{curso.id}}">{{curso.name}} {{curso.lastName}}</mat-list-item>
                   </mat-list>
               </mat-card-content>
               <mat-card-actions>
-                <button mat-flat-button color="accent" class="btn-info"  [routerLink]="['/student/update', student.id]"><mat-icon>edit</mat-icon> Editar</button>
+                <button mat-flat-button color="accent" class="btn-info"  [routerLink]="['/estudante/editar', student.id]"><mat-icon>edit</mat-icon> Editar</button>
                 <button mat-flat-button color="warn" class="btn-danger" (click)="deleteStudent(student.id)"><mat-icon>delete</mat-icon> Excluir</button>
               </mat-card-actions>
             </mat-card>

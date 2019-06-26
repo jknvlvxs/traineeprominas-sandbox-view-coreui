@@ -38,7 +38,7 @@ export class CreateComponent implements OnInit {
     this.api.postCourse(form)
       .subscribe(res => {
           this.isLoadingResults = false;
-          this.router.navigate(['/course/']);
+          this.router.navigate(['/curso/']);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;

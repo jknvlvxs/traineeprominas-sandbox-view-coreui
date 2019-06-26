@@ -47,7 +47,7 @@ putStudent(form: NgForm) {
   this.api.putStudent(this.id, form)
     .subscribe(res => {
         this.isLoadingResults = false;
-        this.router.navigate(['/student/' + this.id]);
+        this.router.navigate(['/estudante/' + this.id]);
       }, (err) => {
         console.log(err);
         this.isLoadingResults = false;
