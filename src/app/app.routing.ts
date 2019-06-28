@@ -10,11 +10,6 @@ import { CallbackComponent } from './callback/callback.component';
 import { AuthGuard } from './auth/auth.guard';
 
 export const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'dashboard',
-  //   pathMatch: 'full',
-  // },
   {
     path: 'callback',
     component: CallbackComponent
@@ -80,10 +75,6 @@ export const routes: Routes = [
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule),
         canActivate: [AuthGuard]
       }
-      // {
-      //   path: 'user',
-      //   loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
-      // },
     ]
   },
   { path: '**', component: P404Component }

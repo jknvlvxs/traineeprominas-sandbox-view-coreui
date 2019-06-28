@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AuthService } from '../app/auth/auth.service';
 import { Observable, of, throwError } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../model/user';
 import { Teacher } from '../model/teacher';
 import { Course } from '../model/course';
@@ -13,7 +12,7 @@ import { Student } from '../model/student';
 })
 export class ApiService {
 
-  readonly endpointProtected = "https://traineeprominas-lpop-sandbox.herokuapp.com/api/v1/";
+  readonly endpointProtected = "https://traineeprominas-lpop-sandbox.herokuapp.com/api/v1.1/";
 
   constructor(private http: HttpClient) {}
 
