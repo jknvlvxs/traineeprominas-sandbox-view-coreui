@@ -76,7 +76,6 @@ import { CallbackComponent } from './callback/callback.component';
     ...APP_CONTAINERS,
     P404Component,
     P500Component,
-    LoginComponent,
     CallbackComponent,
   ],
   providers: [{
